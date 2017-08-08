@@ -15,6 +15,7 @@ yarn add --dev jest babel-jest
 ```
 ## Troubleshooting
 ### Integration with `Flow`
+#### Error message
 ```
 FAIL  src/dog.test.js
   ● Test suite failed to run
@@ -23,4 +24,15 @@ FAIL  src/dog.test.js
         2 |
         3 | class Dog {
       > 4 |   name: string;
+```
+#### Solution
+##### `CLI`
+```
+yarn add babel-preset-flow -D
+```
+##### `.babelrc`
+```
+{
+  "presets": ["flow"]
+}
 ```
